@@ -1,0 +1,114 @@
+{
+    "commerce": [
+        {
+            "category": "Pães",
+            "products": [
+                {
+                    "name": "Pão carioca",
+                    "image": "/images/pao-carioca.jpg",
+                    "imageAlt": "",
+                    "price": "0,50"
+                },
+                {
+                    "name": "Pão massa fina",
+                    "image": "/images/pao-massa-fina.jpg",
+                    "imageAlt": "",
+                    "price": "0,40"
+                },
+                {
+                    "name": "Pão coco",
+                    "image": "/images/pao-de-coco.jpg",
+                    "imageAlt": "",
+                    "price": "3,00"
+                }
+            ]
+        },
+        {
+            "category": "Salgados",
+            "products": [
+                {
+                    "name": "Croassant",
+                    "image": "/images/croassant.jpg",
+                    "imageAlt": "",
+                    "price": "2,50"
+                },
+                {
+                    "name": "Empada",
+                    "image": "/images/empada.jpg",
+                    "imageAlt": "",
+                    "price": "2,50"
+                },
+                {
+                    "name": "Torta de frango",
+                    "image": "/images/torta-de-frango.jpeg",
+                    "imageAlt": "",
+                    "price": "3,00"
+                },
+                {
+                    "name": "Coxinha",
+                    "image": "/images/coxinha.jpg",
+                    "imageAlt": "",
+                    "price": "2,50"
+                }
+            ]
+        },
+        {
+            "category": "Bolos",
+            "products": [
+                {
+                    "name": "Bolo mole",
+                    "image": "/images/bolo-mole.jpg",
+                    "imageAlt": "",
+                    "price": "2,50"
+                },
+                {
+                    "name": "Bolo fofo",
+                    "image": "/images/bolo-fofo.jpg",
+                    "imageAlt": "",
+                    "price": "2,50"
+                },
+                {
+                    "name": "Bolo confeitado",
+                    "image": "/images/bolo-confeitado.jpg",
+                    "imageAlt": "",
+                    "price": "3,50"
+                },
+                {
+                    "name": "Bolo de milho",
+                    "image": "/images/bolo-de-milho.jpg",
+                    "imageAlt": "",
+                    "price": "2,50"
+                }
+            ]
+        },
+        {
+            "category": "Vitaminas",
+            "products": [
+                {
+                    "name": "Vitamina de goiaba",
+                    "image": "/images/vitamina.jpg",
+                    "imageAlt": "",
+                    "price": "4,00"
+                },
+                {
+                    "name": "Vitamina de maracujá",
+                    "image": "/images/vitamina.jpg",
+                    "imageAlt": "",
+                    "price": "4,00"
+                },
+                {
+                    "name": "Vitamina de acerola",
+                    "image": "/images/vitamina.jpg",
+                    "imageAlt": "",
+                    "price": "4,00"
+                },
+                {
+                    "name": "Vitamina de Açaí",
+                    "image": "/images/vitamina.jpg",
+                    "imageAlt": "",
+                    "price": "5,00"
+                }
+            ]
+        }
+    ]
+}
