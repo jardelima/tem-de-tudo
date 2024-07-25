@@ -1,12 +1,54 @@
 "use client";
 
-import Product from "@components/Product";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaArrowLeft } from "react-icons/fa";
 import API from "../../../products.json";
+import Product from "@components/Product";
+import { useDispatch } from "react-redux";
+import { addItemCartRedux } from "../redux/cart/cartSlice";
 
 export default function Balcao() {
+    const [cart, setCart] = useState<Array<{ product: string; quantity: number }>>([]);
+
+    const dispatch = useDispatch();
+
+    const addProduct = (product: string, quantity: number) => {
+        if (cart.length === 0) {
+            setCart(prev => [...prev, { product, quantity }]);
+            return;
+        }
+
+        const filterCart = cart.filter(item => item.product !== product);
+        setCart(() => [...filterCart, { product, quantity }]);
+    };
+
+    const removeProduct = (product: string, quantity: number) => {
+        if (quantity >= 1) {
+            if (quantity === 0) {
+                const filterCart = cart.filter(item => item.product !== product);
+                setCart(filterCart);
+                return;
+            }
+
+            const filterCart = cart.filter(item => item.product !== product);
+            setCart(() => [...filterCart, { product, quantity }]);
+            return;
+        }
+        if (quantity === 0) {
+            const filterCart = cart.filter(item => item.product !== product);
+            setCart(filterCart);
+            return;
+        }
+
+        const filterCart = cart.filter(item => item.product !== product);
+        setCart(() => [...filterCart, { product, quantity }]);
+    };
+
+    useEffect(() => {
+        dispatch(addItemCartRedux(cart));
+    }, [cart]);
+
     return (
         <section className="w-full h-screen overflow-hidden bg-light py-8">
             <div className="container flex items-start justify-start flex-col h-screen">
@@ -44,6 +86,12 @@ export default function Balcao() {
                                             image={product.image}
                                             imageAlt={product.imageAlt}
                                             price={product.price}
+                                            addProduct={(product, quantity) =>
+                                                addProduct(product, quantity)
+                                            }
+                                            removeProduct={(product, quantity) =>
+                                                removeProduct(product, quantity)
+                                            }
                                         />
                                     ))}
                                 </div>

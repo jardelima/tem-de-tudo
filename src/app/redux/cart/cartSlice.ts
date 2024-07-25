@@ -1,9 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+interface ICart {
+    product: string;
+    qtd: number;
+}
+
+const cart: ICart[] = [];
+
 export const cartSlice = createSlice({
     name: "cart",
     initialState: {
-        cart: []
+        cart
     },
     reducers: {
         addItemCartRedux(state, { payload }) {
