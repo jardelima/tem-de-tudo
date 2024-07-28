@@ -6,12 +6,13 @@ interface IPropsProduct {
     price: string;
     image: string;
     imageAlt: string;
+    quantity: number;
     addProduct: (product: string, quantity: number) => void;
     removeProduct: (product: string, quantity: number) => void;
 }
 
 export default function Product(props: IPropsProduct) {
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(props.quantity);
 
     const addProduct = () => {
         setCount(count => count + 1);

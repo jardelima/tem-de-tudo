@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 interface ICart {
     product: string;
-    qtd: number;
+    quantity: number;
 }
 
 const cart: ICart[] = [];
@@ -20,7 +20,4 @@ export const cartSlice = createSlice({
 });
 
 export const { addItemCartRedux } = cartSlice.actions;
-
-export const selectCart = (state: { cart: [] }) => state.cart;
-
 export default cartSlice.reducer;
